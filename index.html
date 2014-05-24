@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>jVectorMap demo</title>
+    <title>Shadowglen</title>
     <link rel="stylesheet" href="stylesheets/jquery-jvectormap-1.2.2.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/bootstrap-theme.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/application.css" type="text/css" media="screen"/>
     <script src="js/libs/jquery-1.10.2.min.js"></script>
     <script src="js/libs/jquery-jvectormap-1.2.2.min.js"></script>
     <script src="js/libs/jquery-jvectormap-us-aea-en.js"></script>
@@ -12,11 +15,17 @@
   </head>
   <body>
     <script type="text/x-handlebars" data-template-name="front">
-      {{view App.MapView}}
+      <div class="map-container">
+        {{view App.MapView}}
+      </div>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="about">
+      <p>This is a place to hold my roleplay ideas for horror stories across the US.</p>
     </script>
 
     <script type="text/x-handlebars" data-template-name="map">
-      <div id="world-map" style="width: 600px; height: 400px"></div>
+      <div id="world-map"></div>
     </script>
 
     <script type="text/x-handlebars" data-template-name="TX">
@@ -28,7 +37,21 @@
     </script>
 
     <script type="text/x-handlebars" data-template-name="application">
-      {{outlet}}
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid>
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Map</a>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li>{{#link-to "about"}}About{{/link-to}}</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        {{outlet}}
+      </div>
     </script>
   </body>
 
