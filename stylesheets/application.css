@@ -1,10 +1,40 @@
 body {
   background: black;
-  color: white;
+}
+
+.container {
+  background-color: #e7e7e7;
+
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+
+  min-height: 500px;
+
+  padding-top: 20px;
 }
 
 #world-map {
   width: 600px;
   height: 400px;
   margin: 0 auto;
+}
+
+.town {
+  padding-left: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+#shadowglen p {
+  text-indent: 20px;
+}
+
+.left {
+  width: 50%;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
 }
