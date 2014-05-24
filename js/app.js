@@ -22,6 +22,7 @@ App.MapView = Ember.View.extend({
       backgroundColor: "black",
       onRegionClick: function(e, code) {
         self.get("controller").send("clickState", code);
+        $(".jvectormap-label").remove();
       }
     });
   }
