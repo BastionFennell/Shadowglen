@@ -3,6 +3,7 @@ window.App = Ember.Application.create();
 App.Router.map(function(){
   this.resource("front", { path: "/" });
   this.resource("TX", {path: "/TX"});
+  this.resource("ND", {path: "/ND"});
 });
 
 App.FrontController = Ember.ObjectController.extend({
